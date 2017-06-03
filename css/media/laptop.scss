@@ -1,0 +1,24 @@
+@media screen and (max-width: 1030px) {
+  .burgers-slider__btn_next {
+    right: 0;
+  }
+
+  .burgers-slider__btn_prev {
+    left: 0;
+  }
+
+  .burgers-slider__text {
+    width: 400px;
+  }
+}
+
+@media screen and (max-height: 770px) {
+  .review__hover {
+    .review__title {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+
+}

@@ -1,0 +1,121 @@
+.team {
+  background: url('../../img/bg/team-bg.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+
+.team__section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  background: rgba(#2f3234, .93);
+  padding: 5% 2% 0 7%;
+
+  .section__title {
+    margin-bottom: 80px;
+  }
+}
+
+.team-acco {
+  padding-left: 17px;
+}
+
+.team-acco__item {
+  margin-bottom: 35px;
+}
+
+.team-acco__item.active {
+
+  .team-acco__trigger {
+    color: $yellow;
+
+    &:before {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .team-acco__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: .3s;
+  }
+}
+
+.team-acco__trigger {
+  color: #fff;
+  font-family: 'gagalin';
+  font-size: 14px;
+  text-decoration: none;
+  position: relative;
+  display: block;
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -18px;
+    top: 8px;
+    width: 0;
+    height: 0;
+  }
+
+  &:before {
+    border-top: 7px solid #f9b43b;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 0 solid transparent;
+    transform: rotate(0deg);
+    transition: .3s;
+  }
+
+}
+
+.team-acco__content {
+  padding-top: 14px;
+  display: none;
+}
+
+.team-acco__pic {
+  width: 30%;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.team-acco__img {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.team-acco__text {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-acco__title {
+  font-family: ubuntu;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.team-acco__textinside {
+  font-family: ubuntu;
+  font-weight: 300;
+  font-size: 14px;
+  color: #fff;
+}

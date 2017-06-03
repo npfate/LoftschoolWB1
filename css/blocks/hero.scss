@@ -1,0 +1,150 @@
+.hero {
+  background: url('../../img/bg/hero-bg.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.header {
+  padding-top: 12px;
+}
+
+.header__container {
+  width: 100%;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__logo {
+  width: 33%;
+  display: inline-flex;
+}
+
+
+.header__menu {
+  width: 67%;
+  padding-top: 16px;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav {
+  width: 83%;
+}
+
+.nav__list {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav__item {
+  white-space: nowrap;
+  margin-right: 15px;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    margin-left: 15px;
+  }
+
+  &:last-child:after {
+    display:none;
+  }
+}
+
+.nav__link {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.order-link {
+  width: 15%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 9px 0;
+  margin-left: 2%;
+}
+
+.hero__container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.hero__content {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__left {
+  width: 50%;
+}
+
+.hero__right {
+  width: 50%;
+  padding-top: 40px;
+}
+
+.hero__description {
+  font-family: 'lifehack';
+  font-size: 65px;
+  color: #fff;
+  line-height: 1em;
+  text-transform: lowercase;
+}
+
+.nextpage-arrow {
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: -15px;
+  -webkit-transition: .3s;
+  transition: .3s;
+
+  svg {
+    width: 30px;
+    height: 30px;
+    transition: .3s;
+    position: relative;
+    top: 0;
+  }
+}
+
+.nextpage-arrow__icon-wrapper {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.nextpage-arrow__icon {
+  fill: #fff;
+  display: block;
+}
