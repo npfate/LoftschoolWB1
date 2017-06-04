@@ -31,10 +31,7 @@
   transition: .3s;
 
   &.active {
-    .menu-accordeon__content {
-      display: block;
-    }
-
+    
     .menu-accordeon__trigger-title {
       color: $yellow;
     }
@@ -43,7 +40,7 @@
 
 .menu-accordeon__item:last-child {
   .menu-accordeon__text {
-    padding-right: 70px; 
+    padding-right: 70px;
   }
 }
 
@@ -80,12 +77,11 @@
 
 .menu-accordeon__content {
   background: rgba(47, 50, 41, 0.93);
-  width: 550px;
+  float: left;
+  width: 0;
   height: 100%;
   color: #fff;
   overflow: hidden;
-  display: none;
-  // transition: .3s;
 }
 
 .menu-accordeon__text {

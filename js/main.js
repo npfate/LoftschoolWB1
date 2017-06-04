@@ -114,7 +114,7 @@ $(function () {
 
 
 
-// accordeon vertical
+// Vertical Accordeon
 
 $(function () {
     $('.team-acco__trigger').on('click', function(e) {
@@ -141,7 +141,7 @@ $(function () {
     });
 });
 
-// Horizontal accordeon
+// Horizontal Accordeon
 
 $(function () {
   $('.menu-accordeon__trigger').on('click', function(e) {
@@ -160,19 +160,19 @@ $(function () {
         items.removeClass('active');
         item.addClass('active');
 
-        // activeContent.animate({
-        //     'width' : '0px'
-        // });
+        activeContent.animate({
+            'width' : '0px'
+        });
 
-        // content.animate({
-        //     'width' : '550px'
-        // })
+        content.animate({
+            'width' : '550px'
+        })
 
     } else {
         item.removeClass('active');
-        // content.animate({
-        //     'width' : '0px'
-        // });
+        content.animate({
+            'width' : '0px'
+        });
     }
 
   });
@@ -182,13 +182,12 @@ $(function () {
 
       if (!$this.closest('.menu-accordeon').length) {
           $('.menu-accordeon__content').animate({
-            'display' : 'none'
+            'width' : '0px'
         });
 
         $('.menu-accordeon__item').removeClass('active');
       }
 
-      // console.log($this);
   });
 
 });
@@ -234,31 +233,36 @@ $(function () {
     e.preventDefault();
 
       var
-          form = $(this);
+          form = $(this),
           formData = form.serialize();
 
-          console.log(formData);
       $.ajax({
         url: 'mail.php',
         type: 'POST',
         data: formData,
         success: function (data) {
 
-          var popup = data.status ? '#success' : '#error'
+          var popup = data.status ? '#success' : '#error';
 
-            $.fancybox.open([
-                  {href : popup}
-              ], {
-                  type: 'inline',
-                  maxWidth: 250,
-                  fitToView: false,
-                  padding: 0,
-                  afterClose : function () {
-                    form.trigger('reset');
-                  }
-              });
-
-          }
+          $.fancybox.open([
+            {href : popup}
+          ], {
+            type: 'inline',
+            maxWidth: 250,
+            fitToView: false,
+            padding: 0,
+            helpers : {
+              overlay : {
+                css : {
+                  'background' : 'rgba(47, 50, 52, 0.92)'
+                }
+              }
+            },
+            afterClose : function () {
+              form.trigger('reset');
+            }
+          });
+        }
       });
 
       $('.status-popup__close').on('click', function (e) {

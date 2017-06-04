@@ -23,6 +23,10 @@
   display: inline-flex;
 }
 
+.logo {
+  display: inline-block;
+}
+
 
 .header__menu {
   width: 67%;
@@ -74,6 +78,10 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .order-link {

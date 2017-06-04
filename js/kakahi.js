@@ -19,7 +19,13 @@ $(function () {
 
 });
 
-
+{
+  start: function () {
+    $(this).css({
+      display: "none"
+    })
+  }
+}
 
 
 // accordeon vertical

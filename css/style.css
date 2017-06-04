@@ -599,6 +599,11 @@ footer {
 .popup {
   display: none; }
 
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
 .hero {
   background: url("../../img/bg/hero-bg.jpg") center center no-repeat;
   background-size: cover;
@@ -634,6 +639,9 @@ footer {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex; }
+
+.logo {
+  display: inline-block; }
 
 .header__menu {
   width: 67%;
@@ -705,6 +713,8 @@ footer {
   text-transform: uppercase;
   text-decoration: none;
   color: #fff; }
+  .nav__link:hover {
+    text-decoration: underline; }
 
 .order-link {
   width: 15%;
@@ -1123,28 +1133,6 @@ footer {
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg); }
 
-.team-acco__item.active .team-acco__content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s; }
-
 .team-acco__trigger {
   color: #fff;
   font-family: 'gagalin';
@@ -1178,26 +1166,13 @@ footer {
 
 .team-acco__pic {
   width: 30%;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flex;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start; }
+  display: block;
+  float: left;
+  text-align: center; }
 
 .team-acco__img {
+  display: inline-block;
+  vertical-align: top;
   width: 100px;
   height: 100px;
   background-size: cover;
@@ -1207,15 +1182,7 @@ footer {
 
 .team-acco__text {
   width: 70%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+  float: left; }
 
 .team-acco__title {
   font-family: ubuntu;
@@ -1274,8 +1241,6 @@ footer {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; }
-  .menu-accordeon__item.active .menu-accordeon__content {
-    display: block; }
   .menu-accordeon__item.active .menu-accordeon__trigger-title {
     color: #f9b43b; }
 
@@ -1326,11 +1291,11 @@ footer {
 
 .menu-accordeon__content {
   background: rgba(47, 50, 41, 0.93);
-  width: 550px;
+  float: left;
+  width: 0;
   height: 100%;
   color: #fff;
-  overflow: hidden;
-  display: none; }
+  overflow: hidden; }
 
 .menu-accordeon__text {
   color: #fff;

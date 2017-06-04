@@ -222,3 +222,9 @@ footer {
 .popup {
   display: none;
 }
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
